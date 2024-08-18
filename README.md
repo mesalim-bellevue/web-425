@@ -1,2 +1,4 @@
-# web-425
-Bellevue University Web Development - WEB 425
+# WEB 425 Angular with TypeScript
+## Contributors
+* Richard Krasso
+* Meher Salim
