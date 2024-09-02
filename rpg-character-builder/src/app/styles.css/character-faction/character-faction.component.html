@@ -1,0 +1,47 @@
+<!--
+  Developer: Meher Salim
+  Filename: character-faction.component.html
+  Date: 08/23/2024
+-->
+
+<div class="faction-manager">
+  <h1>Faction Management</h1>
+  
+  <!-- Form to create or update a faction -->
+  <div class="faction-form">
+    <h2>{{ editingFaction ? 'Update Faction' : 'Create Faction' }}</h2>
+    <form (ngSubmit)="saveFaction()">
+      <label for="factionName">Faction Name:</label>
+      <input id="factionName" [(ngModel)]="factionName" name="factionName" required />
+
+      <label for="factionDescription">Faction Description:</label>
+      <textarea id="factionDescription" [(ngModel)]="factionDescription" name="factionDescription" required></textarea>
+
+      <button type="submit">{{ editingFaction ? 'Update' : 'Create' }} Faction</button>
+    </form>
+  </div>
+  
+  <!-- List of factions -->
+  <div class="faction-list">
+    <h2>Existing Factions</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let faction of factions">
+          <td>{{ faction.name }}</td>
+          <td>{{ faction.description }}</td>
+          <td>
+            <button (click)="editFaction(faction)">Edit</button>
+            <button (click)="deleteFaction(faction)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
