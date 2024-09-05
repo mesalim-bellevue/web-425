@@ -1,0 +1,39 @@
+<!-- 
+  Developer: Meher Salim
+  Filename: app.component.html
+  Date: 08/16/2024
+-->
+<div class="container">
+  <header>
+    <!--Navigation Menu-->
+    <nav>
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/signin">Sign In</a></li>
+        <li><a routerLink="/players">Players</a></li>
+        <li><a routerLink="/create-character">Create Character</a></li>
+        <li><a routerLink="/create-guild">Create Guild</a></li>
+        <li><a routerLink="/character-faction">Character Faction</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!--Main Content Area-->
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <!--Footer with Navigation Menu-->
+  <footer>
+    <nav>
+      <ul>
+        <li><a routerLink="/home">Home</a></li>
+        <li><a routerLink="/signin">Sign In</a></li>
+        <li><a routerLink="/players">Players</a></li>
+        <li><a routerLink="/create-character">Create Character</a></li>
+        <li><a routerLink="/create-guild">Create Guild</a></li>
+        <li><a routerLink="/character-faction">Character Faction</a></li>
+      </ul>
+    </nav>
+  </footer>
+</div>
