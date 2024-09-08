@@ -1,0 +1,76 @@
+/*
+  Designer: Meher Salim
+  Filename: app.component.css
+  Date: 08/16/2024
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
+/*
+  Fonts:
+    font-family: "Open Sans", sans-serif;
+    font-family: "Sedan", serif;
+    font-family: 'Verdana', sans-serif;
+*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: pink;
+}
+  
+header, footer {
+  background-color: #282c34;
+  color: whitesmoke;
+  padding: 1rem;
+}
+  
+nav {
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+  
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+  
+nav ul li a {
+  color: pink;
+  text-decoration: none;
+  font-family: "Sedan", serif;
+}
+nav ul li a:hover {
+  color: white;
+  text-decoration: underline;
+}
+  
+header {
+  font-family: "Sedan", serif;
+}
+
+h1{
+  text-align: center;
+  padding: 10px;
+ }
+  
+footer {
+  background-color: #333;
+  padding: 10px;
+  bottom: 0;
+}
+  
+main {
+  padding: 2rem;
+  background-color: aquamarine;
+}
+  

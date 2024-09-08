@@ -1,0 +1,66 @@
+<!--
+  Developer: Meher Salim
+  Filename: create-character.component.html
+  Date: 08/23/2024
+-->
+
+<div class="create-character-container">
+  <h2>Create a New Character</h2>
+
+  <form (ngSubmit)="onSubmit()" #characterForm="ngForm">
+
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="character.name" required />
+    </div>
+
+    <div>
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" [(ngModel)]="character.gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="class">Class:</label>
+      <select id="class" name="class" [(ngModel)]="character.class" required>
+        <option value="Warrior">Warrior</option>
+        <option value="Mage">Mage</option>
+        <option value="Rogue">Rogue</option>
+        <option value="Fae">Fae</option>
+        <option value="Vampire">Vampire</option>
+        <option value="Assasin">Assasin</option>
+        <option value="Soulfinder">Soulfinder</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="faction">Faction:</label>
+      <input type="text" id="faction" name="faction" [(ngModel)]="character.faction" required />
+    </div>
+
+    <div>
+      <label for="startingLocation">Starting Location:</label>
+      <input type="text" id="startingLocation" name="startingLocation" [(ngModel)]="character.startingLocation" required />
+    </div>
+
+    <div>
+      <label for="funFact">Fun Fact:</label>
+      <input type="text" id="funFact" name="funFact" [(ngModel)]="character.funFact" required />
+    </div>
+
+    <button type="submit" [disabled]="!characterForm.form.valid">Create Character</button>
+
+  </form>
+
+  <div class="character-list">
+    <h3>Created Characters</h3>
+    <ul>
+      <li *ngFor="let char of characters">
+        {{ char.id }} - {{ char.name }} ({{ char.gender }}) - {{ char.class }}
+      </li>
+    </ul>
+  </div>
+</div>
