@@ -1,0 +1,17 @@
+<!--
+  Developer: Meher Salim
+  Filename: players.component.html
+  Date: 08/23/2024
+-->
+
+<div class="players-container">
+  <a routerLink="/players" data-test-id="players-link">Go to Players</a>
+  <div *ngFor="let character of characters" class="character-card" data-test-id="character-item">
+    <h3 class="name">{{ character.name}}</h3>
+    <p><strong>Gender:</strong> {{character.gender}}</p>
+    <p><strong>Class:</strong> {{ character.class }}</p>
+    <p><strong>Faction:</strong> {{ character.faction }}</p>
+    <p><strong>Starting Location:</strong> {{ character.startingLocation }}</p>
+    <p><strong>Fun Fact:</strong> {{ character.funFact }}</p>
+  </div>
+</div>

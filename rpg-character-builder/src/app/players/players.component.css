@@ -1,0 +1,46 @@
+/*
+  Designer: Meher Salim
+  Filename: players.component.css
+  Date: 08/23/2024
+*/
+
+.players-container {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: Black;
+  font: 1.3em bolder;
+}
+a:hover {
+  color: darkgreen;
+}
+a::after {
+  color: blueviolet;
+}
+
+.name {
+  color: pink;
+  font: 1.65em bolder;
+}
+
+.character-card {
+  padding: 10px;
+  border: 3px double #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: rgb(32, 32, 32);
+}
+
+@media (max-width: 768px) {
+  .players-container {
+    grid-template-columns: 1fr;
+  }
+}

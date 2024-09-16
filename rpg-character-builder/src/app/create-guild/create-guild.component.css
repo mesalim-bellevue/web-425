@@ -1,0 +1,71 @@
+/*
+  Designer: Meher Salim
+  Filename: create-guild.component.css
+  Date: 08/23/2024
+*/
+
+/* Style for the container */
+.create-guild-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the success message */
+.success-message {
+  color: darkcyan;
+  background-color: #e8f5e9;
+  border: 1px solid peachpuff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Style for the error message */
+.error-message {
+  color: darkorchid;
+  background-color: #ffebee;
+  border: 1px solid peachpuff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Style for the form elements */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: aquamarine;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: pink;
+}
