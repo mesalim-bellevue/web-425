@@ -1,0 +1,22 @@
+<!--
+  Developer: Meher Salim
+  Filename: character-list.component.html
+  Date: 09/26/2024
+-->
+
+<div *ngIf="characters.length === 0" class="empty-message">
+  No characters available
+</div>
+
+<div *ngIf="characters.length > 0">
+  <h3>Created Characters</h3>
+  <div class="character-card-container">
+    <div class="character-card" *ngFor="let char of characters">
+      <h4>{{ char.name }} ({{ char.gender }})</h4>
+      <p>Class: {{ char.class }}</p>
+      <p>Faction: {{ char.faction }}</p>
+      <p>Starting Location: {{ char.startingLocation }}</p>
+      <p>Fun Fact: {{ char.funFact }}</p>
+    </div>
+  </div>
+</div>

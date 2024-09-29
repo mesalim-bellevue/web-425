@@ -1,0 +1,101 @@
+/*
+  Designer: Meher Salim
+  Filename: create-guild.component.css
+  Date: 08/23/2024
+*/
+
+/* Container styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Input fields, textarea, and select */
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Checkbox and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Error messages */
+div[ngIf] {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/* Radio group styling */
+label[for="notificationPreference"] {
+  margin-right: 15px;
+}
+
+.radio-group {
+  margin-bottom: 15px;
+}
+
+/* Submit button */
+button[type="submit"] {
+  background-color: #b577cc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Hover effect for the button */
+button[type="submit"]:hover:not(:disabled) {
+  background-color: #442f84;
+}
+
+/* Center the form on the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eef2f7;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Highlight invalid fields */
+input.ng-invalid.ng-touched, 
+textarea.ng-invalid.ng-touched, 
+select.ng-invalid.ng-touched {
+  border-color: red;
+}
