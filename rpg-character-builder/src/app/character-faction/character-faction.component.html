@@ -1,0 +1,47 @@
+<!--
+  Developer: Meher Salim
+  Filename: character-faction.component.html
+  Date: 08/23/2024
+-->
+
+<div class="faction-container">
+  <h1>Character Factions</h1>
+
+  <div class="faction-form">
+    <h2>Create New Faction</h2>
+    <form [formGroup]="factionForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="name">Faction Name:</label>
+        <input id="name" formControlName="name" placeholder="Enter faction name" />
+        <div *ngIf="factionForm.get('name')?.invalid && factionForm.get('name')?.touched">
+          <small *ngIf="factionForm.get('name')?.errors?.['required']">Name is required.</small>
+          <small *ngIf="factionForm.get('name')?.errors?.['minlength']">Name must be at least 3 characters long.</small>
+        </div>
+      </div>
+
+      <div>
+        <label for="description">Faction Description:</label>
+        <textarea id="description" formControlName="description" placeholder="Enter faction description"></textarea>
+        <div *ngIf="factionForm.get('description')?.invalid && factionForm.get('description')?.touched">
+          <small *ngIf="factionForm.get('description')?.errors?.['required']">Description is required.</small>
+          <small *ngIf="factionForm.get('description')?.errors?.['minlength']">Description must be at least 10 characters long.</small>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="factionForm.invalid">Create Faction</button>
+    </form>
+  </div>
+
+  <div class="faction-grid" *ngIf="factions.length; else errorTemplate">
+    <div class="faction-card" *ngFor="let faction of factions">
+      <h3>{{ faction.name }}</h3>
+      <p>{{ faction.description }}</p>
+    </div>
+  </div>
+</div>
+
+<ng-template #errorTemplate>
+  <div class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</ng-template>
